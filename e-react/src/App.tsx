@@ -8,10 +8,16 @@ import { Route, Routes } from 'react-router-dom';
 //     (메인)이 되는 파일임을 파일명으로 명시
 // : 폴더 명 만으로 해당 파일 호출이 가능
 import Index0413 from './views/0413';
+import Index0414 from './views/0414';
 
 function App() {
   return (
     <>
+    {/*  
+    Routes 태그 외부에 있는 코드의 경우
+    : URL 경로와 상관없이 렌더링
+    */}
+    <h1>React 수업 자료</h1>
       <Routes>
         {/*  
           npm run start
@@ -27,6 +33,8 @@ function App() {
 
         */}
         <Route path='/0413' element={<Index0413 />} />
+        {/* JSX 문서에서 HTML 내에 JS 코드 작성: 중괄호 내에 작성 */}
+        <Route path='/0414' element={<Index0414 />} />
       </Routes>
     </>
   );

@@ -14,6 +14,5 @@ export default function Component03() {
     <div>
       <img src={puppy02} alt="강아지02" width={200} />
     </div>
-    <div></div>
   )
 }

@@ -1,0 +1,12 @@
+/* caption{
+  caption-side: bottom;
+} */
+
+table{
+  border-collapse: collapse;
+  caption-side: bottom; /* 테이블 안에 넣어도 됨 */
+}
+
+th, td{
+  border: 1px solid #222;
+}

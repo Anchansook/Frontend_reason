@@ -1,0 +1,44 @@
+/* [속성] 선택자 */
+input[value]{
+  background-color: yellow;
+}
+
+/* [속성="값"] 선택자 */
+input[type="password"]{
+  background-color: green;
+}
+
+/* [속성~="값"] 선택자 */
+div[class~="sentence"]{
+  border: 1px solid #000;
+}
+
+input[value~="Name"]{
+  border: 1px solid pink;
+}
+
+/* [속성|="값"] 선택자 */
+/* 
+- 하이픈으로 연결된 속성값은 스타일 적용에 무시 
+- : 연결된 단어이지만 각각의 속성값으로 적용 가능
+*/
+div[class|="sentence"]{
+  text-decoration: underline;
+}
+This is a div element with a class attribute
+/* [속성^="값"] 선택자 */
+a[href^="http://"]{
+  color: green;
+}
+
+/* [속성$="값"] 선택자 */
+a[href$=".com"]{
+  background-color: #000;
+}
+
+/* [속성*="값"] 선택자 */
+.example[class*="example"]{
+  font-size: 20px;
+}
+
+/* *[class*="example"]{} */

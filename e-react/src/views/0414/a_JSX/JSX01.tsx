@@ -34,7 +34,7 @@ import React from 'react'
 - class 속성을 className으로 설정
   : HTML에서 코드를 가져오는 경우
   : class 속성명을 변경
-  >> ctrl + f (찾기)
+  >> ctrl + f (찾기) >> 찾아서 바꾸기도 가능 (모두 or 선택)
 */
 
 export function Div() {
@@ -49,8 +49,8 @@ export function Div() {
 export default function JSX01() {
 
   // return 반환문
-  // : 노드(HTML)을 반환하는 부분
-  // : 전체 elements를 감싸는 단 하나의 요소가 존재해야 한다.
+  // : 노드(HTML)을 반환하는 부분 (화면에 보이도록)
+  // : 전체 elements를 감싸는 단 하나의 요소((빈) Fragment)가 존재해야 한다. 
 
   //? (빈) Fragment
   // : 아무 의미없는 태그

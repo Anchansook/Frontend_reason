@@ -28,8 +28,72 @@ const employees = [
 ];
 */
 
-export default function Practice0414() {
+interface User {
+  name: string;
+  email: string;
+  age: number;
+}
+
+interface UserProfileProps {
+  user: User;
+}
+
+interface DiscountMessageProps {
+  isDiscountActive: boolean;
+}
+
+function UserProfile({ user }: UserProfileProps) {
   return (
-    <div></div>
+    <div>
+      <h1>{user.name}</h1>
+      <p>Email: {user.email}</p>
+      <p>Age: {user.age}</p>
+    </div>
+  );
+}
+
+function DiscountMessage({ isDiscountActive }: DiscountMessageProps) {
+  return (
+    <div>
+      {isDiscountActive ? <strong>할인 중!</strong> : "현재 할인되지 않음."}
+    </div>
+  );
+}
+
+function FilteredEmployeeList() {
+  const employees = [
+    { id: 1, name: '이승아', role: 'developer', experience: 5 },
+    { id: 2, name: '정주연', role: 'designer', experience: 2 },
+    { id: 3, name: '전예찬', role: 'developer', experience: 3 },
+    { id: 4, name: '이도경', role: 'manager', experience: 7 },
+    { id: 5, name: '정혜윤', role: 'developer', experience: 1 }
+  ];
+
+  const filteredAndSorted = employees
+    .filter(employee => employee.role === 'developer' && employee.experience >= 3)
+    .sort((a, b) => b.experience - a.experience)
+    .map(employee => (
+      <li key={employee.id}>{employee.name} ({employee.experience} years)</li>
+    ));
+
+  return <ul>{filteredAndSorted}</ul>;
+}
+
+export default function Practice0414() {
+  const user = { name: "홍길동", email: "example@example.com", age: 25 };
+
+  return (
+    <div>
+      <UserProfile user={user} />
+
+      <hr />
+      <DiscountMessage isDiscountActive={true} />
+
+      <hr />
+      <FilteredEmployeeList />
+
+    </div>
   )
 }
+
+

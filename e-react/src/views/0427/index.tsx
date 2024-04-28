@@ -4,6 +4,7 @@ import StateProps02 from './a_State.Props/StateProps02'
 import UseRef from './b_useRef/UseRef'
 import UseRef02 from './b_useRef/UseRef02'
 import Arr01 from './c_Array/Arr01'
+import Arr02 from './c_Array/Arr02'
 
 const images = [
   'https://cdn.pixabay.com/photo/2024/01/15/21/16/dog-8510901_640.jpg',
@@ -28,6 +29,7 @@ export default function Index() {
 
       <h2>3. 배열 렌더링</h2>
       <Arr01 />
+      <Arr02 />
 
     </div>
   )

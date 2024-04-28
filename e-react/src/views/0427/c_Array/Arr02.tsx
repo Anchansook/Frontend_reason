@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 //! useRef: DOM 선택
 // : 컴포넌트 내에서 조회 및 수정할 수 있는 변수 관리
@@ -18,18 +18,20 @@ interface ItemProps {
   onEdit: (id: number, amount: number) => void;
 }
 
-// 각 아이템을 보여주는 컴포넌트
+// '각' 아이템을 보여주는 컴포넌트
 // : 수정과 삭제 기능은 상위 컴포넌트에서 처리
-const ItemComponent = ({ item, onRemove, onEdit} :ItemProps) => {
-  <div>
-    <strong>{item.name}</strong>
-    <input 
-      type="number"
-      value={item.amount}
-      onChange={(e) => onEdit(item.id, parseInt(e.target.value))}
-    />
-    <button onClick={() => onRemove(item.id)}>삭제</button>
-  </div>
+const ItemComponent = ({ item, onRemove, onEdit }: ItemProps) => {
+  return (
+    <div>
+      <strong>{item.name}</strong>
+      <input
+        type="number"
+        value={item.amount}
+        onChange={(e) => onEdit(item.id, parseInt(e.target.value))}
+      />
+      <button onClick={() => onRemove(item.id)}>삭제</button>
+    </div>
+  )
 }
 
 interface ItemListProps {
@@ -39,18 +41,17 @@ interface ItemListProps {
 }
 
 
-const ItemList = ({ items, onRemove, onEdit } :ItemListProps) => {
+const ItemList = ({ items, onRemove, onEdit } :ItemListProps) => (
     <>
       {items.map(item => (
         <ItemComponent
-          key={item.id}
           item={item}
           onRemove={onRemove}
           onEdit={onEdit}
         />
       ))}
     </>
-}
+)
 
 // 기존 장바구니 항목
 const initialItems = [
@@ -86,7 +87,7 @@ export default function Arr02() {
   return (
     <div>
       <button 
-      onClick={() => onCreate('새 항목', 1)}
+        onClick={() => onCreate('새 항목', 1)}
       >
         새 물품 추가
       </button>

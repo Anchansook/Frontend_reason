@@ -47,9 +47,9 @@ export default function Arr01() {
         <Item items={item} key={index} />
       })} 
       */}
-      {initialItems.map(item => {
+      {initialItems.map(item => (
         <Item items={item} key={item.id} />
-      })}
+      ))}
     </>
   )
 }

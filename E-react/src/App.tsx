@@ -16,6 +16,7 @@ import Index0421 from './views/0421';
 import Index0427 from './views/0427';
 import Index0428 from './views/0428';
 import Index0504 from './views/0504';
+import Index0505 from './views/0505';
 
 function App() {
   return (
@@ -49,14 +50,15 @@ function App() {
           <Route path="/" element={<렌더링 할 페이지>} />
 
         */}
-        <Route path='/0413' element={<Index0413 />} />
         {/* JSX 문서에서 HTML 내에 JS 코드 작성: 중괄호 내에 작성 */}
+        <Route path='/0413' element={<Index0413 />} />
         <Route path='/0414' element={<Index0414 />} />
         <Route path='/0420' element={<Index0420 />} />
         <Route path='/0421' element={<Index0421 />} />
         <Route path='/0427' element={<Index0427 />} />
         <Route path='/0428' element={<Index0428 />} />
         <Route path='/0504' element={<Index0504 />} />
+        <Route path='/0505' element={<Index0505 />} />
       </Routes>
     </>
   );

@@ -1,0 +1,117 @@
+/* 기본 설정 */
+
+/*  
+! body(페이지 전체 디자인)
+글자색: #333
+줄간격: 1.6
+*/
+
+/*  
+! a요소
+글자색: #007bff / 밑줄 없앰 / 호버 시 밑줄 생성
+*/
+
+/*  
+! header
+글자색: #fff / 텍스트 정렬: 가운데
+
+! 네비게이션 바 nav ul
+목록 스타일 제거, 텍스트정렬(가운데)
+
+! nav ul li a - 글자색 (#fff)
+>> 호버 시 글자색 (#555)
+
+! 섹션 태그 내의 h2 태그
+글자색(#333)
+
+! 테이블 테두리 설정 1px solid #ddd
+각 셀 텍스트 정렬 왼쪽
+*/
+
+/* ! 전체 페이지 */
+
+*{padding: 0; margin: 0;}
+
+body{
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* ! 링크 태그 설정 */
+a{
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+header{
+  color: #fff;
+  text-align: center;
+  background-color: #333;
+  /* 
+  최상위 부모인 root의 폰트 크기를 기준으로 설정 
+  */
+  padding: 1rem 0;
+  /* padding: 16px 0;과 동일 */
+}
+
+header h1{
+  margin: 0.5rem 0;
+}
+
+header p{
+  margin: 0;
+}
+
+/* ! nav 태그 내의 ul 지정 */
+nav ul{
+  list-style-type: none;
+  text-align: center;
+  background-color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  display: inline;
+}
+
+nav ul li a{
+  color: #fff;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+nav ul li a:hover{
+  background-color: #555;
+}
+
+section{
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2{
+  color: #333;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td{
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th{
+  background-color: #e7f1ff;
+}

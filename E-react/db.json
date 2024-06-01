@@ -1,0 +1,52 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "리액트란 무엇인가",
+      "author": "안찬숙",
+      "reviews": [
+        {
+          "reviewId": 1,
+          "rating": 5,
+          "comment": "너무 좋은 책입니다."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "프론트엔드 정복하기",
+      "author": "백지희",
+      "reviews": [
+        {
+          "reviewId": 2,
+          "rating": 3,
+          "comment": "그냥 그런 책입니다."
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicdoe"
+    },
+    {
+      "id": "1",
+      "title": "리액트란 무엇인가",
+      "author": "안찬숙"
+    },
+    {
+      "id": "2",
+      "title": "프론트엔드 정복하기",
+      "author": "백지희"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "주석입니다.",
+      "postId": 1
+    }
+  ]
+}

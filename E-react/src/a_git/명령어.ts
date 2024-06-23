@@ -5,19 +5,21 @@ export const tmp = '';
 : 팀원들은 원본 리포지토리를 Fork하고 자신의 GitHub 계정에 복사된 리포지토리를 로컬로 클론
 
 $ git clone https://github.com/your-username/repository-name.git
-$ cd repository-name
+$ cd repository-name - 복사해올 때 생성해온 폴더 삭제, 복사된 애를 빼냄 (이건 무시해도 됨)
 
 2. Upstream 원격 추가
 : 원본 리포지토리의 변경 사항을 가져오기 위해 upstream 원격을 추가
 
 $ git remote add upstream https://github.com/original-owner/repository-name.git
------------------------------------------------------------------------------
+----------------------------------------------------------------------------- 1번만!!
 
 3. 브랜치 생성 및 작업
 : 각 팀원은 자신의 브랜치를 생성하고 그 브랜치에서 작업을 수행
 
 브랜치 생성
 $ git checkout -b feature-branch-name
+
+------------------------------------------------------------------------------- 1번만!!
 
 작업 내용 커밋
 $ git add .

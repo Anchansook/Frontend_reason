@@ -11,6 +11,7 @@ $ cd repository-name - 복사해올 때 생성해온 폴더 삭제, 복사된 �
 : 원본 리포지토리의 변경 사항을 가져오기 위해 upstream 원격을 추가
 
 $ git remote add upstream https://github.com/original-owner/repository-name.git
+
 ----------------------------------------------------------------------------- 1번만!!
 
 3. 브랜치 생성 및 작업
@@ -21,13 +22,26 @@ $ git checkout -b feature-branch-name
 
 ------------------------------------------------------------------------------- 1번만!!
 
+(
+#작업 전
+$ git fetch upstream
+$ git checkout main
+$ git merge upstream/main
+$ git push origin main
+)
+
+# 작업 후 올릴 때마다 옆에 내 브랜치인지 확인하기
 작업 내용 커밋
+$ git status
 $ git add .
 $ git commit -m "작업 내용 설명"
 
 자신의 GitHub 리포지토리에 푸시
 $ git push origin feature-branch-name
+# ----------------------------------------------------
 
+# 항상 먼저 작업 전에 메인을 병합해오기
+& 받아올 땐 main !!!
 4. 원본 리포지토리와 동기화
 
 원본 리포지토리의 변경 사항 가져오기
@@ -38,6 +52,7 @@ $ git checkout main
 
 원본 리포지토리의 변경 사항을 로컬 메일 브랜치에 병합
 $ git merge upstream/main
+# -----------------------------------------------------
 
 === 병합 후 충돌 해결 (필요한 경우) === 
 충돌이 발생하면 충돌된 파일을 수정한 후 스테이징하고 커밋
@@ -45,7 +60,9 @@ $ git merge upstream/main
 -- 충돌 수정 후 --
 $ git add 충돌된-파일
 $ git commit -m "충돌 해결"
+# -----------------------------------------------------
 
+# 커밋 후 메인에 다시 병합시켜주기
 5. 브랜치에 변경 사항 반영
 
 작업 브랜치로 돌아가기
